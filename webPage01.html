@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<!--
+Comment
+-->
+
+<html lang = "pt-br">
+    <head>
+        <title>About Me</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This is what my website is all about!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            img, embed, object, video{
+                max-width:100%;
+            }
+            p {
+                color: blue;
+                text-align:justify;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+            /* add CSS here */
+            h1 {
+                color: green;
+                text-decoration:underline;
+            }
+            .c1 {
+                text-emphasis: em;
+                color:pink;
+                text-indent: 30px;
+            }
+            #id1 {
+                color: red;
+                font-style: italic;
+                text-transform:capitalize;
+                font-weight:200;
+            }
+            .cimg{
+                border:solid;
+                cursor:progress;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Title screen</h1>
+        <hr>
+
+        <h2 class="c1">Secondary title</h2>
+        <h3 class="c1 c2 c3">Important text</h3>
+        <h4 id="id1">Not so important text</h4>
+
+        <div>
+            <p>Next is a Table:</p>
+            <table>
+                <tr>
+                    <th>Id</th> <th>Name</th> <th>Caught</th>
+                </tr>
+                <tr>
+                    <td>#001</td> <td>Bulbasaur</td> <td> Yes</td>
+                </tr>
+                <tr>
+                    <td>#002</td> <td>Ivysaur</td> <td> Yes</td>
+                </tr>
+            </table>
+        </div>
+
+        <form action="processa.php" method="post">
+            <label>Text</label>
+            <input type="text" name="Input01" placeholder="Insira texto">
+            <br>
+
+            <label>Senha</label>
+            <input type="password" name="Senha01" placeholder="Senha">
+            <br>
+
+            <select name="selecao">
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+            </select>
+            <br>
+
+            <label>Radio</label><br>
+            <input type="radio" name="radio1" value="1">Valor1<br>
+            <input type="radio" name="radio1" value="2">Valor2<br>
+
+            <label>Checkbox</label><br>
+            <input type="checkbox" name="radio1" value="1" checked>Valor1<br>
+            <input type="checkbox" name="radio1" value="2">Valor2<br>
+
+            <label>Submit</label>
+            <input type="submit" value="Enviar" name="submit1">
+        </form>
+        <p>This is a paragraph. More more more more more more moremore more more more more moremore more more more more moremore more more more more moremore more more more more more</p>
+        
+        <p>Next is an <strong>Unordered</strong> List:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <ul>
+                <li>Node.js</li>
+            </ul>
+        </ul>
+
+        <div>
+            <p><em>Italic</em>/emphasis example</p>
+        </div>
+
+        <p>
+            This is a hyperlink to 
+            <a href="https://www.google.com">Google</a>
+        </p>
+
+        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/ngc6357_0.jpg" 
+        alt="Nasa image"
+        height=300
+        class="cimg">
+
+        <img src="img.png" 
+        alt="local image"
+        height=300>
+        <figcaption>Local image</figcaption>
+
+        <div>
+            <button class="favorite styled" type="button">
+                Click this Button
+            </button>
+        </div>
+        
+    </body>
+</html>
