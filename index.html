@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css1.css">
+    <script>
+        /*
+        function displayWelcome(){
+            alert("Bem-vindo ao meu site! \nPrazer em conhecê-l@")
+        }
+        */
+        function checkInput(){
+            var input = document.getElementById("input").value;
+            if(input.length > 0){
+                document.getElementById("check").innerHTML = "OK!";
+            }
+            else{
+                document.getElementById("check").innerHTML = "Please fill the form.";
+            }
+        }
+        function displayInput(){
+            var input = document.getElementById("input").value;
+            document.getElementById("output").innerHTML = "Yout typed:"+input;
+        }
+        /*
+        function hoverPopUp(){
+            prompt("Fill in your image path:", "users/you/images/");
+        }
+        */
+    </script>
+</head>
+<body onload="displayWelcome();">
+    <h1 class = "title">Projeto Contagem de Grãos</h1>
+    <h2 class = "subtitle">Um projeto da IEEE Computer Society UFABC + Electronics Packaging Society UFABC</h2>
+
+    <p id ="introduction">Esse projeto consiste na utilização de técnicas de Processamento de Imagens para realizar a determinação de tamanho de grão para imagens de micrografia de metais. Essa tarefa é atualmente realizada manualmente por todos os estudantes de Engenharia na UFABC, em especial os de Engenharia de Materias. O objetivo final é a criação de um site que realize essa tarefa automaticamente e com precisão.</p>
+
+    <br>
+    <span>Link para o site funcionando:</span>
+    <a href="https://ieeecsufabc.github.io/Contagem-de-Gr-os/prototype02.html">Protótipo 2</a>
+
+    <br>
+    <h3 class = "subtitle">Digite um número:</h3>
+    <input id="input" type="number" onblur="checkInput();">
+    <span id="check"></span>
+    <button onclick="displayInput();">Enviar</button>
+    <br>
+    <p id="output"></p>
+
+    <br>
+    <h3 class = "subtitle">Faça o upload de uma imagem:</h3><br>
+    <img onmouseover="hoverPopUp();"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/OOjs_UI_icon_upload.svg/1024px-OOjs_UI_icon_upload.svg.png" alt="Upload Button">
+    
+    <br>
+    <table >
+        <tr>
+            <td>Frst c</td><td>Scnd c</td><td>Thrd c</td>
+        </tr>
+        <tr>
+            <td>Frst d</td><td>Scnd d</td><td>Thrd d</td>
+        </tr>
+        <tr>
+            <td>Frst d</td><td>Scnd d</td><td>Thrd d</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
