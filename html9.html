@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css1.css">
+    <script type="text/javascript" src="validation1.js"></script>
+</head>
+<body>
+    <H1>Sign up to IEEE Computer Society of Federal University of ABC</H1>
+
+    <br>
+
+    <form action="">
+        Name: <br>
+        <input type="text" id="name" name="name" onblur="validateName();" placeholder="name" required> 
+        <span id="messageName">&nbsp;</span><br>
+        
+        Mail: <br>
+        <input type="text" id="mail" name="mail" onblur="validateMail();"value="@gmail.com" required> 
+        <span id="messageMail">&nbsp;</span><br>
+        
+        Password: <br>
+        <input type="password" id="password" name="password" onblur="validatePassword();" required> 
+        <span id="messagePassword">&nbsp;</span><br><br>
+
+        Project you have interest: <br>
+        <input type="radio" name="project" value="Contagem" checked> Contagem <br>
+        <input type="radio" name="project" value="Site"> Site <br>
+        <input type="radio" name="project" value="Restauração"> Restauração <br>
+        
+        Times available: <br>
+        <input type="checkbox" name="time" value="14h">14h <br>
+        <input type="checkbox" name="time" value="15h">15h <br>
+        <input type="checkbox" name="time" value="16h">16h <br>
+        <input type="checkbox" name="time" value="17h">17h <br>
+
+        Hours available in each time slot: <br>
+        <input type="number" name="hours" min="1" max="3"><br>
+
+        Select prefered start date: <br>
+        <input type="date" name="date"><br>
+
+        Select the preferred color to the project's template: <br>
+        <input type="color" name="color"> <br>
+
+        <br>
+        <span onclick="submitForm();" style="background-color: white; border-radius: 2px; padding:5px;">
+            Submit
+        </span>
+
+        <span id="confirm">&nbsp;</span>
+    </form>
+</body>
+</html>
