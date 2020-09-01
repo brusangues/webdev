@@ -3,72 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="css1.css">
-    <script>
-        /*
-        function displayWelcome(){
-            alert("Bem-vindo ao meu site! \nPrazer em conhecê-l@")
-        }
-        */
-        function checkInput(){
-            var input = document.getElementById("input").value;
-            if(input.length > 0){
-                document.getElementById("check").innerHTML = "OK!";
-            }
-            else{
-                document.getElementById("check").innerHTML = "Please fill the form.";
-            }
-        }
-        function displayInput(){
-            var input = document.getElementById("input").value;
-            document.getElementById("output").innerHTML = "Yout typed:"+input;
-        }
-        /*
-        function hoverPopUp(){
-            prompt("Fill in your image path:", "users/you/images/");
-        }
-        */
-    </script>
+    <title>Grain Size Analysis Sign up</title>
+    <link rel="stylesheet" type="text/css" href="style_final.css">
+    <script type="text/javascript" src="validation_final.js"></script>
 </head>
-<body onload="displayWelcome();">
-    <h1 class = "title">Projeto Contagem de Grãos</h1>
-    <h2 class = "subtitle">Um projeto da IEEE Computer Society UFABC + Electronics Packaging Society UFABC</h2>
-
-    <p id ="introduction">Esse projeto consiste na utilização de técnicas de Processamento de Imagens para realizar a determinação de tamanho de grão para imagens de micrografia de metais. Essa tarefa é atualmente realizada manualmente por todos os estudantes de Engenharia na UFABC, em especial os de Engenharia de Materias. O objetivo final é a criação de um site que realize essa tarefa automaticamente e com precisão.</p>
-
-    <br>
-    <span>Link para o site funcionando:</span>
-    <a href="https://ieeecsufabc.github.io/Contagem-de-Gr-os/prototype02.html">Protótipo 2</a>
-
-    <br>
-    <h3 class = "subtitle">Digite um número:</h3>
-    <input id="input" type="number" onblur="checkInput();">
-    <span id="check"></span>
-    <button onclick="displayInput();">Enviar</button>
-    <br>
-    <p id="output"></p>
-
-    <br>
-    <h3 class = "subtitle">Faça o upload de uma imagem:</h3><br>
-    <img onmouseover="hoverPopUp();"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/OOjs_UI_icon_upload.svg/1024px-OOjs_UI_icon_upload.svg.png" alt="Upload Button">
+<body>
+    <H1>Grain Size Analysis Project </H1>
+    <h3>IEEE Computer Society UFABC + IEEE Electronics Packaging Society UFABC</h3>
+    <img src="/grain.png" alt="grain size analysis icon">
+    <p>This project utilizes Digital Image Processing techniques to perform grain size analysis in metal micrograph images. This task is currently done manually by Engineering Students in the Federal University of ABC (UFABC), especially Material Engineering students. The final objective is creating a website that performs this task precisely and automatically. <a href="https://ieeecsufabc.github.io/Contagem-de-Gr-os/prototype02.html">Test the prototype!</a> </p>
     
+    
+
+    <h2>Please fill the form bellow to sign up:</h2>
+
+    <form action="submitted/" onsubmit="return validateForm();" method="get">
+        
+        <span class="flex">
+            <span class="left">
+                Name: <br>
+                <input type="text" id="name" name="name" onblur="validateName();" placeholder="name" required> 
+                <span id="messageName">&nbsp;</span><br>
+                
+                Phone: <br>
+                <input type="text" id="phone" name="phone" onblur="validatePhone()" placeholder="+55 11 00000-0000"required>
+                <span id="messagePhone">&nbsp;</span><br>
+        
+                Mail: <br>
+                <input type="text" id="mail" name="mail" onblur="validateMail();" placeholder="example@gmail.com" required> 
+                <span id="messageMail">&nbsp;</span><br>
+                
+                Password: <br>
+                <input type="password" id="password" name="password" onblur="validatePassword();" required> 
+                <span id="messagePassword">&nbsp;</span><br>
+        
+                Confirm Password: <br>
+                <input type="password" id="password2" name="password2" onblur="validatePassword2();" required> 
+                <span id="messagePassword2">&nbsp;</span><br><br>
+            </span>
+    
+            <span class="right">
+                Skills you know: <br>
+                <input type="checkbox" name="skills" value="Web Development"> Web Development<br>
+                <input type="checkbox" name="skills" value="Python"> Python <br>
+                <input type="checkbox" name="skills" value="Git"> Git <br>
+                
+                Times available for meeting: <br>
+                <input type="checkbox" name="time" value="14h"> 14h <br>
+                <input type="checkbox" name="time" value="15h"> 15h <br>
+                <input type="checkbox" name="time" value="16h"> 16h <br>
+                <input type="checkbox" name="time" value="17h"> 17h <br>
+            </span>
+        </span>
+
+        <br>
+        <span onclick="submitForm();" id="submitSpan">
+            Confirm
+        </span>
+
+        <span id="confirm">&nbsp;</span>
+
+        <span id="hidden" style="display:none;">
+            <input type="checkbox" id="term"name="term" value="term" required> I agree to the terms and conditions<br>
+            <br>
+            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+        </span>
+    </form>
     <br>
-    <table >
-        <tr>
-            <td>Frst c</td><td>Scnd c</td><td>Thrd c</td>
-        </tr>
-        <tr>
-            <td>Frst d</td><td>Scnd d</td><td>Thrd d</td>
-        </tr>
-        <tr>
-            <td>Frst d</td><td>Scnd d</td><td>Thrd d</td>
-        </tr>
-
-    </table>
-
     <br>
-    <h1>Bruno Sanches Rodrigues</h1>
-
+    <br>
 </body>
 </html>
