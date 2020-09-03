@@ -13,7 +13,7 @@ function validateName() {
 
 function validatePhone() {
     var field = document.getElementById("phone").value;
-    var regex = /^[0-9+\-\(\)]+$/;
+    var regex = /^[0-9+\-\(\)]{16}$/;
 
     field = field.split(' ').join('');
 
@@ -83,7 +83,6 @@ function submitForm() {
 }
 
 function validateForm() {
-    var term = document.getElementById("term").value;
     
     if(validatePassword2()){
         return true;
